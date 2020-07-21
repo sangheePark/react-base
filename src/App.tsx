@@ -1,26 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useMemo } from 'react'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import * as Views from './view'
+import './App.css'
+import PrivateRoute from '@view/PirvateRoute'
+import { useSelector } from 'react-redux'
+import { userSelector } from '@module/reducer/user'
+import { MUser } from '@model/user'
 
-function App() {
+const App: React.FC = () => {
+  const state: MUser = useSelector(userSelector)
+  const isLogin = (user: MUser): boolean => {
+    console.log("user.id !== '':" + user.id !== '')
+    return user.id !== ''
+  }
+  const authentication: boolean = useMemo(() => isLogin(state), [state])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Router>
+      <Switch>
+        <Route exact path="/login" component={Views.Login} />
+        <PrivateRoute authentication={authentication} exact path="/" page={Views.Home} />
+        <Route component={Views.NotFound} />
+      </Switch>
+    </Router>
+  )
 }
 
-export default App;
+export default App
