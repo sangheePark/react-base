@@ -3,16 +3,20 @@ import { State } from './index'
 import { UserAction } from '@module/action'
 import { MUser } from '@model/user'
 
-// const defaultState = {} as Record<string, User>
 const defaultState: MUser = {
   id: '',
   name: ''
 }
-export const getUser = createReducer(defaultState, (handleAction) => [
-  handleAction(UserAction.GET.success, (state, { payload, meta }) => {
+export const fetchUser = createReducer(defaultState, (handleAction) => [
+  handleAction(UserAction.LOGIN.success, (state, { payload, meta }) => {
     return {
       ...state,
-      user: payload
+      ...payload
+    }
+  }),
+  handleAction(UserAction.LOGOUT.success, (state, {}) => {
+    return {
+      ...defaultState
     }
   })
 ])

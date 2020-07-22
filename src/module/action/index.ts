@@ -1,3 +1,4 @@
 import UserAction from './user'
+import AppAction from './app'
 
-export { UserAction }
+export { AppAction, UserAction }

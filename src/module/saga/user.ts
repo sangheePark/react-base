@@ -1,7 +1,7 @@
 import { call, put, fork, takeEvery } from 'redux-saga/effects'
-import { UserAction } from '@module/action'
-import { MUser, MUserFilter } from '@model/user'
+import { UserAction, AppAction } from '@module/action'
 import { UserService } from '@module/service'
+import { MUser, MUserFilter } from '@model/user'
 
 const api2 = (user: MUserFilter): Promise<MUser[]> => Promise.resolve([])
 
@@ -18,68 +18,39 @@ function* getUserList({ meta }: ReturnType<typeof UserAction.GET_LIST.trigger>) 
   }
 }
 
-function* getUser({ meta }: ReturnType<typeof UserAction.GET.trigger>) {
+function* login({ meta }: ReturnType<typeof UserAction.LOGIN.trigger>) {
   try {
+    yield put(AppAction.SET_LODER.success(true))
     const user = yield call(UserService.login, meta)
-    yield put(UserAction.GET.success(user, meta))
+    yield put(UserAction.LOGIN.success(user, meta))
   } catch (error) {
-    yield put(UserAction.GET.failure(error, meta))
+    yield put(UserAction.LOGIN.failure(error, meta))
+  } finally {
+    yield put(AppAction.SET_LODER.success(false))
   }
 }
 
-function* get() {
-  yield takeEvery(UserAction.GET.TRIGGER, getUser)
+function* doLogin() {
+  yield takeEvery(UserAction.LOGIN.TRIGGER, login)
 }
 
-// function* runUpsert({ payload: { id, username } }) {
-//   const error = yield call(db.update, 'users', id, { username })
-//   if (!error) {
-//     yield put(successUpsertUser())
-//   } else {
-//     yield put(failureUpsertUser())
-//   }
-// }
+function* logout({}: ReturnType<typeof UserAction.LOGOUT.trigger>) {
+  try {
+    yield put(AppAction.SET_LODER.success(true))
+    yield put(UserAction.LOGOUT.success({}))
+  } catch (error) {
+    yield put(UserAction.LOGOUT.failure(error))
+  } finally {
+    yield put(AppAction.SET_LODER.success(false))
+  }
+}
 
-// function* upsert() {
-//   yield* takeEvery(REQUEST_UPSERT_USER, runUpsert)
-// }
-
-// function* runGet({ payload: { id } }) {
-//   const user = yield call(db.get, 'users', id)
-//   if (user) {
-//     yield put(successGetUser({ id, data: user }))
-//   } else {
-//     yield put(failureGetUser())
-//   }
-// }
-
-// function* triggerUpsertUser() {
-//   while (true) {
-//     let {
-//       payload: { id, username }
-//     } = yield take(SET_USERNAME)
-//     if (!username || username.length === 0) {
-//       id = '@@anonymous'
-//       username = 'Anonymous'
-//     }
-//     yield put(requestUpsertUser({ id, username }))
-//   }
-// }
-
-// function* triggerGetUser() {
-//   while (true) {
-//     const {
-//       payload: { data }
-//     } = yield take(SYNC_ADDED_POST)
-//     const post = data.val()
-//     yield put(requestGetUser({ id: post.userId }))
-//   }
-// }
+function* doLogout() {
+  yield takeEvery(UserAction.LOGOUT.TRIGGER, logout)
+}
 
 export default function* userSaga() {
   yield fork(getList)
-  yield fork(get)
-
-  // yield fork(triggerUpsertUser)
-  // yield fork(triggerGetUser)
+  yield fork(doLogin)
+  yield fork(doLogout)
 }

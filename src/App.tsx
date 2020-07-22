@@ -7,14 +7,17 @@ import PrivateRoute from '@view/PirvateRoute'
 import { useSelector } from 'react-redux'
 import { userSelector } from '@module/reducer/user'
 import { MUser } from '@model/user'
+import Loder from '@component/Loder'
+import { MApp } from '@model/app'
+import { appSelector } from '@module/reducer/app'
 
 const App: React.FC = () => {
-  const state: MUser = useSelector(userSelector)
+  const app: MApp = useSelector(appSelector)
+  const user: MUser = useSelector(userSelector)
   const isLogin = (user: MUser): boolean => {
-    console.log("user.id !== '':" + user.id !== '')
     return user.id !== ''
   }
-  const authentication: boolean = useMemo(() => isLogin(state), [state])
+  const authentication: boolean = useMemo(() => isLogin(user), [user])
 
   return (
     <Router>
@@ -23,6 +26,7 @@ const App: React.FC = () => {
         <PrivateRoute authentication={authentication} exact path="/" page={Views.Home} />
         <Route component={Views.NotFound} />
       </Switch>
+      <Loder show={app.loding}></Loder>
     </Router>
   )
 }
