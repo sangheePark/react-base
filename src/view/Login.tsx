@@ -6,17 +6,15 @@ import { MLogin } from '@model/user'
 
 export interface ILoginProps {
   value: MLogin
-  onChange?: () => void
   onClick: (login: MLogin) => void
 }
 const Login: React.FC<ILoginProps> = ({ value, onClick }): React.ReactElement => {
-  const { t, i18n } = useTranslation(['login', 'error'])
+  const { t, i18n } = useTranslation(['login', 'valid', 'error'])
   const [state, setState] = useState<MLogin>({
     ...value
   })
 
   const onFinish = (values: any) => {
-    console.log('doLogin:' + state)
     onClick(state)
   }
 
@@ -47,7 +45,7 @@ const Login: React.FC<ILoginProps> = ({ value, onClick }): React.ReactElement =>
             rules={[
               {
                 required: true,
-                message: 'Please input your Username!'
+                message: t('valid:required', { field: t('id') })
               }
             ]}
           >
@@ -64,7 +62,7 @@ const Login: React.FC<ILoginProps> = ({ value, onClick }): React.ReactElement =>
             rules={[
               {
                 required: true,
-                message: 'Please input your Password!'
+                message: t('valid:required', { field: t('password') })
               }
             ]}
           >

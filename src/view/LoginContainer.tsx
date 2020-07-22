@@ -9,9 +9,10 @@ const LoginContainer: React.SFC = (): React.ReactElement => {
     id: '',
     password: ''
   })
+
   const dispatch = useDispatch()
   const doLogin = (login: MLogin) => {
-    console.log('doLogin:' + login)
+    // console.log('doLogin:' + login)
     dispatch(UserAction.GET.trigger(login))
   }
   return <Login value={state} onClick={doLogin}></Login>
