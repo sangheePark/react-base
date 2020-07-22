@@ -20,7 +20,7 @@ function* getUserList({ meta }: ReturnType<typeof UserAction.GET_LIST.trigger>) 
 
 function* getUser({ meta }: ReturnType<typeof UserAction.GET.trigger>) {
   try {
-    const user = yield call(UserService.get)
+    const user = yield call(UserService.login, meta)
     yield put(UserAction.GET.success(user, meta))
   } catch (error) {
     yield put(UserAction.GET.failure(error, meta))

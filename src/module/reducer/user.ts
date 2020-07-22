@@ -12,7 +12,7 @@ export const getUser = createReducer(defaultState, (handleAction) => [
   handleAction(UserAction.GET.success, (state, { payload, meta }) => {
     return {
       ...state,
-      [meta.id]: payload
+      user: payload
     }
   })
 ])

@@ -1,13 +1,14 @@
 import API from '@module/api'
-import { MUser } from '@model/user'
+import { MUser, MLogin } from '@model/user'
 import { AxiosResponse } from 'axios'
 
 const UserService = {
-  get: (): Promise<MUser> => {
-    return new Promise(async (resolve, reject) => {
+  login: (login: MLogin): Promise<MUser> => {
+    return new Promise<MUser>(async (resolve, reject) => {
       try {
         const response: AxiosResponse = await API.get('/user')
-        resolve(response.data)
+        const user: MUser = response.data
+        resolve(user)
       } catch (error) {
         reject(error)
       }

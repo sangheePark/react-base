@@ -16,10 +16,10 @@ const persistConfig = {
 }
 
 const enhancedReducer = persistReducer(persistConfig, reducer)
-const initialState = {}
+const sagaMiddleware = createSagaMiddleware()
+const createStroeWithMddleware = applyMiddleware(sagaMiddleware, logger)(createStore)
 export default () => {
-  const sagaMiddleware = createSagaMiddleware()
-  const store = createStore(enhancedReducer, initialState, applyMiddleware(sagaMiddleware, logger))
+  const store = createStroeWithMddleware(enhancedReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
   sagaMiddleware.run(rootSaga)
   const persistor = persistStore(store)
   return { store, persistor }

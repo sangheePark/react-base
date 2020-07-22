@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import * as Views from './view'
+import './i18n'
 import './App.css'
 import PrivateRoute from '@view/PirvateRoute'
 import { useSelector } from 'react-redux'

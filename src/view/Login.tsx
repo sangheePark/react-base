@@ -1,16 +1,36 @@
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Form, Input, Button, Checkbox, Col, Row } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
 import { MLogin } from '@model/user'
 
-const Login: React.FC = (): React.ReactElement => {
-  const onFinish = (values: any) => {
-    console.log('Received values of form: ', values)
-  }
+export interface ILoginProps {
+  value: MLogin
+  onChange?: () => void
+  onClick: (login: MLogin) => void
+}
+const Login: React.FC<ILoginProps> = ({ value, onClick }): React.ReactElement => {
+  const { t, i18n } = useTranslation(['login', 'error'])
   const [state, setState] = useState<MLogin>({
-    id: '',
-    password: ''
+    ...value
   })
+
+  const onFinish = (values: any) => {
+    console.log('doLogin:' + state)
+    onClick(state)
+  }
+
+  const handelChangeInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const {
+      target: { value, name }
+    } = e
+
+    console.log('name:' + name)
+    setState({
+      ...state,
+      [name]: value
+    })
+  }
   return (
     <Row justify="center" align="middle" style={{ height: '100%' }}>
       <Col>
@@ -23,7 +43,7 @@ const Login: React.FC = (): React.ReactElement => {
           onFinish={onFinish}
         >
           <Form.Item
-            name="username"
+            name="id"
             rules={[
               {
                 required: true,
@@ -31,7 +51,13 @@ const Login: React.FC = (): React.ReactElement => {
               }
             ]}
           >
-            <Input value={state.id} prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
+            <Input
+              name="id"
+              value={value.id}
+              onChange={handelChangeInput}
+              prefix={<UserOutlined className="site-form-item-icon" />}
+              placeholder={t('id')}
+            />
           </Form.Item>
           <Form.Item
             name="password"
@@ -43,10 +69,12 @@ const Login: React.FC = (): React.ReactElement => {
             ]}
           >
             <Input
-              value={state.password}
+              name="password"
+              value={value.password}
+              onChange={handelChangeInput}
               prefix={<LockOutlined className="site-form-item-icon" />}
               type="password"
-              placeholder="Password"
+              placeholder={t('password')}
             />
           </Form.Item>
           <Form.Item>
