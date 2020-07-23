@@ -15,6 +15,7 @@ const Login: React.FC<ILoginProps> = ({ value, onClick }): React.ReactElement =>
   })
 
   const onFinish = (values: any) => {
+    // console.log('value:' + JSON.stringify(state))
     onClick(state)
   }
 
@@ -23,7 +24,8 @@ const Login: React.FC<ILoginProps> = ({ value, onClick }): React.ReactElement =>
       target: { value, name }
     } = e
 
-    console.log('name:' + name)
+    // console.log('name:' + name)
+    // console.log('value:' + value)
     setState({
       ...state,
       [name]: value

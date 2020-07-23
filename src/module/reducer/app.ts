@@ -10,10 +10,17 @@ const defaultState: MApp = {
 }
 export const fetchApp = createReducer(defaultState, (handleAction) => [
   //Looding
-  handleAction(AppAction.SET_LODER.success, (state, { payload }) => {
+  handleAction(AppAction.OPEN_LODING.success, (state) => {
+    console.log('xxxxxx')
     return {
       ...state,
-      loding: payload
+      loding: true
+    }
+  }),
+  handleAction(AppAction.CLOSE_LODING.success, (state) => {
+    return {
+      ...state,
+      loding: false
     }
   })
 ])

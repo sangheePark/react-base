@@ -1,8 +1,8 @@
-import { createRoutine } from 'redux-routines-ts'
+import { createRoutine } from '@module/routine'
 import { MUser, MUserFilter, MLogin } from '@model/user'
 
 const AppAction = {
-  SET_LODER: createRoutine<boolean>('SET_LODER')
-  // GET: createRoutine<MUser, MLogin>('GET_USER')
+  OPEN_LODING: createRoutine('OPEN_LODING'),
+  CLOSE_LODING: createRoutine('CLOSE_LODING')
 }
 export default AppAction

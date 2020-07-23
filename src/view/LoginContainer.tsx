@@ -20,8 +20,8 @@ const LoginContainer: React.SFC = (): React.ReactElement => {
   // }, [user])
 
   const doLogin = (login: MLogin) => {
+    // console.log(login)
     dispatch(UserAction.LOGIN.trigger(login))
-    // history.replace('/')
   }
   return <Login value={state} onClick={doLogin}></Login>
 }

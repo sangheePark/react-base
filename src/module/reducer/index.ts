@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux'
-import { loadingReducer } from 'redux-routines-ts'
-// import auth from './auth'
+import { loadingReducer } from '@module/routine'
 import { fetchApp as app } from './app'
 import { fetchUser as user } from './user'
 
