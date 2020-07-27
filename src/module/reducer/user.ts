@@ -9,7 +9,7 @@ const defaultState: MUser = {
 }
 export const fetchUser = createReducer(defaultState, (handleAction) => [
   handleAction(UserAction.LOGIN.success, (state, { payload, meta }) => {
-    console.log('LOGIN:palLoad:' + payload)
+    // console.log('LOGIN:palLoad:' + payload)
     return {
       ...state,
       ...payload

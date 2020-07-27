@@ -6,13 +6,13 @@ const UserService = {
   login: (login: MLogin): Promise<MUser> => {
     return new Promise<MUser>(async (resolve, reject) => {
       try {
-        resolve({
-          id: login.id,
-          name: '홍길동'
-        })
-        // const response: AxiosResponse = await API.get('/user')
-        // const user: MUser = response.data
-        // resolve(user)
+        // resolve({
+        //   id: login.id,
+        //   name: '홍길동'
+        // })
+        const response: AxiosResponse = await API.get('/user')
+        const user: MUser = response.data
+        resolve(user)
       } catch (error) {
         console.log('UserService.login' + JSON.stringify(error))
         reject(error)

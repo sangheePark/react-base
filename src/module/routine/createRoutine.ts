@@ -14,9 +14,11 @@ import { createActionCreator, getType, Action } from 'deox'
  * @typeparam Params    the metadata required to start a routine, for example the ID of an object
  */
 export const createRoutine: RoutineCreator = <Payload, Params = void>(typePrefix: string): Routine<Payload, Params> => {
-  const trigger = createActionCreator(`${typePrefix}_TRIGGER`, (resolve) => (params: Params) => resolve(undefined, params))
-  const success = createActionCreator(`${typePrefix}_SUCCESS`, (resolve) => (payload: Payload, params: Params) => resolve(payload, params))
-  const failure = createActionCreator(`${typePrefix}_FAILURE`, (resolve) => (error: Error, params: Params) => resolve(error, params))
+  const trigger = createActionCreator(`${typePrefix}_TRIGGER`, (resolve) => (params?: Params) => resolve(undefined, params))
+  const success = createActionCreator(`${typePrefix}_SUCCESS`, (resolve) => (payload?: Payload, params?: Params) =>
+    resolve(payload, params)
+  )
+  const failure = createActionCreator(`${typePrefix}_FAILURE`, (resolve) => (error?: Error, params?: Params) => resolve(error, params))
   return {
     trigger,
     success,
@@ -35,7 +37,7 @@ export interface Routine<Payload, Params> {
    * dispatch(fetchFoo.trigger({ id: '5'}))
    * ```
    */
-  trigger: ((params: Params) => Action<string, undefined, Params>) & {
+  trigger: ((params?: Params) => Action<string, undefined, Params>) & {
     type: string
     toString(): string
   }
@@ -47,7 +49,7 @@ export interface Routine<Payload, Params> {
    * dispatch(fetchFoo.success(foo))
    * ```
    */
-  success: ((payload: Payload, params: Params) => Action<string, Payload, Params>) & {
+  success: ((payload?: Payload, params?: Params) => Action<string, Payload, Params>) & {
     type: string
     toString(): string
   }
@@ -59,7 +61,7 @@ export interface Routine<Payload, Params> {
    * dispatch(fetchFoo.failure(error))
    * ```
    */
-  failure: ((error: Error, params: Params) => Action<string, Error, Params>) & {
+  failure: ((error?: Error, params?: Params) => Action<string, Error, Params>) & {
     type: string
     toString(): string
   }
