@@ -25,6 +25,6 @@ export const fetchUser = createReducer(defaultState, (handleAction) => [
 ])
 
 export const userSelector = (state: State) => {
-  console.log('userSelector:' + JSON.stringify(state))
+  // console.log('userSelector:' + JSON.stringify(state))
   return state.user
 }
