@@ -1,0 +1,8 @@
+{
+  "login": {
+    "regist":"Would you like to register it?",
+    "modify":"Would you like to modify it?",
+    "save":"Do you want to save it?",
+    "delete":"Are you sure you want to delete?"
+  }
+}

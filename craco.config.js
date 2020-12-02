@@ -6,5 +6,14 @@ module.exports = {
       source: 'tsconfig',
       tsConfigPath: 'tsconfig.paths.json'
     }
-  }]
+  }],
+  eslint: {
+    enable: true,
+    mode: 'extends',
+    configure: {
+      rules: {
+        'default-case': 0
+      }
+    },
+  }
 }

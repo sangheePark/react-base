@@ -1,3 +1,6 @@
 {
-  "required": "Please input {{field}}."
+  "required": "Please input {{field}}.",
+  "login": {
+    "notEmptyId": "Please input your email or id."
+  }
 }

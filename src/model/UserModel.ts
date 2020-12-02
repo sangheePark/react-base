@@ -6,7 +6,6 @@ export interface MUser {
   id: string
   name: string
 }
-
 export interface MUserFilter {
   name?: string
 }

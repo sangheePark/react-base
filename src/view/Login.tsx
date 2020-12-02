@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Form, Input, Button, Checkbox, Col, Row } from 'antd'
 import { UserOutlined, LockOutlined } from '@ant-design/icons'
-import { MLogin } from '@model/user'
+import { MLogin } from '@model/UserModel'
 
 export interface ILoginProps {
   value: MLogin
   onClick: (login: MLogin) => void
 }
 const Login: React.FC<ILoginProps> = ({ value, onClick }): React.ReactElement => {
-  const { t, i18n } = useTranslation(['login', 'valid', 'error'])
+  const { t, i18n } = useTranslation(['label', 'valid', 'error'])
   const [state, setState] = useState<MLogin>({
     ...value
   })
@@ -47,7 +47,7 @@ const Login: React.FC<ILoginProps> = ({ value, onClick }): React.ReactElement =>
             rules={[
               {
                 required: true,
-                message: t('valid:required', { field: t('id') })
+                message: t('valid:required', { field: t('label:id') })
               }
             ]}
           >
@@ -56,7 +56,7 @@ const Login: React.FC<ILoginProps> = ({ value, onClick }): React.ReactElement =>
               value={value.id}
               onChange={handelChangeInput}
               prefix={<UserOutlined className="site-form-item-icon" />}
-              placeholder={t('id')}
+              placeholder={t('label:id')}
             />
           </Form.Item>
           <Form.Item
@@ -64,7 +64,7 @@ const Login: React.FC<ILoginProps> = ({ value, onClick }): React.ReactElement =>
             rules={[
               {
                 required: true,
-                message: t('valid:required', { field: t('password') })
+                message: t('valid:required', { field: t('label:password') })
               }
             ]}
           >
@@ -74,7 +74,7 @@ const Login: React.FC<ILoginProps> = ({ value, onClick }): React.ReactElement =>
               onChange={handelChangeInput}
               prefix={<LockOutlined className="site-form-item-icon" />}
               type="password"
-              placeholder={t('password')}
+              placeholder={t('label:password')}
             />
           </Form.Item>
           <Form.Item>

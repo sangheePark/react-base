@@ -1,3 +1,6 @@
 {
-  "required": "{{field}}를 입력해주세요."
+  "required": "Please input {{field}}.",
+  "login": {
+    "notEmptyId": "Please input your email or id."
+  }
 }

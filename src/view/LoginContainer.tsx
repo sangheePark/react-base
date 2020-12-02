@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import Login from './Login'
-import { MLogin } from '@model/user'
+import { MLogin } from '@model/UserModel'
 import { useDispatch, useSelector } from 'react-redux'
 import { UserAction } from '@module/action'
-import { userSelector } from '@module/reducer/user'
+import { userSelector } from '@module/reducer/UserReducer'
 import { useHistory } from 'react-router'
 
 const LoginContainer: React.SFC = (): React.ReactElement => {
@@ -23,6 +23,7 @@ const LoginContainer: React.SFC = (): React.ReactElement => {
     // console.log(login)
     dispatch(UserAction.LOGIN.trigger(login))
   }
+  // return <div>xxxxxx</div>
   return <Login value={state} onClick={doLogin}></Login>
 }
 

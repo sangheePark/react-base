@@ -1,4 +1,4 @@
-import UserAction from './user'
-import AppAction from './app'
+import UserAction from './UserAction'
+import AppAction from './AppAction'
 
 export { AppAction, UserAction }

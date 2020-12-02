@@ -6,9 +6,9 @@ import './App.css'
 import PrivateRoute from '@view/PirvateRoute'
 import { useSelector } from 'react-redux'
 import Loder from '@component/Loder'
-import { MApp } from '@model/app'
-import { appSelector } from '@module/reducer/app'
+import { appSelector } from '@module/reducer/AppReducer'
 import LoginRoute from '@view/LoginRoute'
+import { MApp } from '@model/AppModel'
 
 const App: React.FC = () => {
   const app: MApp = useSelector(appSelector)

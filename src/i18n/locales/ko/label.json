@@ -1,0 +1,16 @@
+{
+  "id": "ID",
+  "password": "Password",
+  "from": "From",
+  "to": "To",
+  "all": "ALL",
+  "date": {
+    "toDay": "To Day",
+    "year": "Year",
+    "month": "Month",
+    "day": "Day",
+    "hour": "Hour",
+    "min": "Min",
+    "sec": "Sec"
+  }
+}

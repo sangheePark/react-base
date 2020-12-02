@@ -1,5 +1,5 @@
+import { MUser, MLogin } from '@model/UserModel'
 import API from '@module/api'
-import { MUser, MLogin } from '@model/user'
 import { AxiosResponse } from 'axios'
 
 const UserService = {

@@ -1,5 +1,5 @@
-import { MUser } from '@model/user'
-import { userSelector } from '@module/reducer/user'
+import { MUser } from '@model/UserModel'
+import { userSelector } from '@module/reducer/UserReducer'
 import React, { useMemo } from 'react'
 import { useSelector } from 'react-redux'
 import { Route, Redirect, RouteProps, RouteComponentProps } from 'react-router-dom'

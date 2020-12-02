@@ -1,14 +1,13 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { userSelector } from '@module/reducer/user'
-import { MUser } from '@model/user'
+import { userSelector } from '@module/reducer/UserReducer'
 import { UserAction } from '@module/action'
 
 const Home: React.FC = (): React.ReactElement => {
   const dispatch = useDispatch()
   const user = useSelector(userSelector)
   const handleLogout = (e: React.MouseEvent) => {
-    dispatch(UserAction.LOGOUT.trigger())
+    dispatch(UserAction.LOGOUT.action())
   }
   return (
     <div>
