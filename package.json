@@ -21,7 +21,7 @@
     "@types/redux-persist": "^4.3.1",
     "@types/redux-saga": "^0.10.5",
     "antd": "^4.4.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "craco-alias": "^2.1.1",
     "deox": "^3.2.1",
     "i18next": "^19.6.2",
