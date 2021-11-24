@@ -1,0 +1,27 @@
+/* position */
+.absolute {
+	position: absolute;
+}
+.fixed {
+	position: fixed;
+}
+.relative {
+	position: relative;
+}
+.static {
+	position: static;
+}
+
+/* display */
+.none {
+	display: none;
+}
+.block {
+	display: block;
+}
+.flex {
+	display: flex;
+}
+.flex-one {
+	flex: 1;
+}

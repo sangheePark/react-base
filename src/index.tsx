@@ -9,18 +9,19 @@ import './index.css'
 import App from './App'
 
 const { store, persistor, history } = configStroe()
+
 const renderReactDom = () => {
-  ReactDOM.render(
-    <React.StrictMode>
-      <Router history={history}>
-        <Provider store={store}>
-          <PersistGate loading={null} persistor={persistor}>
-            <App />
-          </PersistGate>
-        </Provider>
-      </Router>
-    </React.StrictMode>,
-    document.getElementById('root')
-  )
+	ReactDOM.render(
+		<React.StrictMode>
+			<Router history={history}>
+				<Provider store={store}>
+					<PersistGate loading={null} persistor={persistor}>
+						<App />
+					</PersistGate>
+				</Provider>
+			</Router>
+		</React.StrictMode>,
+		document.getElementById('root'),
+	)
 }
 renderReactDom()

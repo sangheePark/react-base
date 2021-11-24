@@ -4,6 +4,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### yarn 실행 오류
+▶해결 방법
+1. 관리자 권한으로 PowerShell 실행.
+2. 실행 정책을 확인하기 위해 'ExecutionPolicy' 명령어 실행.
+3. 'Restricted'라고 표시되고 있으면, 현재 정책 때문에 위에 오류가 발생한 것을 알 수 있습니다.
+4. 스크립트를 허용하기 위해 'Set-ExecutionPolicy Unrestricted' 명령어 실행.
+5. 변경된 실행 정책을 확인하기 위해 'ExecutionPolicy' 명령어 실행
+6. 'Unrestricted'라고 표시되면 스크립트가 허용되는 것을 알 수 있습니다.
+7. 이전 스크립트로 테스트.
+
 ### `yarn start`
 
 Runs the app in the development mode.<br />

@@ -4,6 +4,7 @@
     "paths": {
       "@enum": ["src/enum/index"],
       "@view/*": ["src/view/*"],
+      "@styles/*": ["src/styles/*"],
       "@component/*": ["src/component/*"],
       "@model/*": ["src/model/*"],
       "@module/*": ["src/module/*"]

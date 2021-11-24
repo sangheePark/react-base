@@ -11,17 +11,17 @@ import LoginRoute from '@view/LoginRoute'
 import { MApp } from '@model/AppModel'
 
 const App: React.FC = () => {
-  const app: MApp = useSelector(appSelector)
-  return (
-    <>
-      <Switch>
-        <LoginRoute exact path="/login" page={Views.Login} />
-        <PrivateRoute exact path="/" page={Views.Home} />
-        <Route component={Views.NotFound} />
-      </Switch>
-      <Loder show={app.loding}></Loder>
-    </>
-  )
+	const app: MApp = useSelector(appSelector);
+	return (
+		<>
+			<Switch>
+				<LoginRoute exact path="/login" page={Views.Login} />
+				<PrivateRoute exact path="/" page={Views.Home} />
+				<Route component={Views.NotFound} />
+			</Switch>
+			<Loder show={app.loding}></Loder>
+		</>
+	)
 }
 
 export default App

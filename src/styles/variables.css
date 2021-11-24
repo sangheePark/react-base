@@ -1,0 +1,9 @@
+:root {
+	--page-margin: 2.5rem;
+	--color: #333;
+	--list-bg: #f9f9f9;
+	--list-border: #f8f8f8;
+	--line-list-border: #e0e0e0;
+	--side-padding: 1rem;
+	--header-height: 72px;
+}
