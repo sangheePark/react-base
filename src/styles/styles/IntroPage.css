@@ -1,0 +1,35 @@
+.IntroPage {
+  padding: calc(env(safe-area-inset-top) + 96px) 24px calc(env(safe-area-inset-bottom) + 24px) 24px;
+  /* padding: 96px 24px 24px 24px; */
+}
+
+.IntroPage .welcome {
+  font-size: 20px;
+  font-weight: 700;
+  padding: 0 0 36px;
+  color: #434343;
+}
+
+.IntroPage .LG {
+  color: #a50034;
+}
+
+.IntroPage .greeting {
+  font-size: 13px;
+  color: #595454;
+}
+
+.IntroPage .greeting .bold {
+  color: #595454;
+  font-weight: 700;
+}
+
+.IntroPage .greeting > div {
+  background: url("../images/check_shield.png") no-repeat;
+  background-size: 20px;
+  padding: 0 0 16px 28px;
+}
+
+.IntroPage .greeting > div:last-child {
+  padding-bottom: 0;
+}

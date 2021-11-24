@@ -1,0 +1,42 @@
+.IncomePage {
+}
+
+.IncomePage .Income .contents {
+  height: 457px;
+  background: #ffffff;
+  border-radius: 25px 25px 0 0;
+}
+
+.IncomePage .Income .contents .gray-bar {
+  width: 32px;
+  height: 4px;
+  background: #e8e8e8;
+  margin: 16px auto 0 auto;
+}
+
+.IncomePage .Income .contents .title {
+  padding-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 24px;
+}
+.IncomePage .Income .contents .title .small-title {
+  font-size: 14px;
+}
+
+.IncomePage .Income .contents .list {
+  font-size: 16px;
+}
+.IncomePage .Income .contents .list .item {
+  margin-top: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+.IncomePage .Income .contents .list .item:last-child {
+  border-bottom: 0;
+}
+
+.IncomePage .Income .contents .list .item .text {
+  padding-left: 24px;
+  padding-bottom: 20px;
+  font-size: 14px;
+}

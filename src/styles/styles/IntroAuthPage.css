@@ -1,0 +1,79 @@
+.IntroAuthPage .Auth {
+  width: 100%;
+}
+
+.IntroAuthPage .Auth .contents {
+  background: #ffffff;
+  border-radius: 25px 25px 0 0;
+  padding: calc(env(safe-area-inset-top) + 16px) 24px calc(env(safe-area-inset-bottom) + 25px) 24px;
+  /* padding: 16px 24px 25px 24px; */
+  width: 100%;
+}
+.IntroAuthPage .Auth .contents .gray-bar {
+  width: 32px;
+  height: 4px;
+  background: #e8e8e8;
+  font-weight: 500;
+  margin: 0 auto;
+}
+.IntroAuthPage .Auth .contents .title {
+  padding: 1.25rem 0 1.25rem 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #2e2e2e;
+}
+.IntroAuthPage .Auth .contents h4 {
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #2e2e2e;
+}
+.IntroAuthPage .Auth .contents ul + h4 {
+  margin-top: 1.5rem;
+}
+.IntroAuthPage .Auth .contents h4 strong {
+  color: #376696;
+}
+.IntroAuthPage .Auth .contents li {
+  display: flex;
+  padding: 0 0 0 3.25rem;
+  margin: 0;
+  background-size: 2.5rem;
+  background-repeat: no-repeat;
+  height: 2.5rem;
+  align-items: center;
+}
+.IntroAuthPage .Auth .contents li + li {
+  margin-top: 1.25rem;
+}
+.IntroAuthPage .Auth .contents .phone {
+  background-image: url("../images/ico_phone.svg");
+}
+.IntroAuthPage .Auth .contents .file {
+  background-image: url("../images/ico_folder.svg");
+}
+.IntroAuthPage .Auth .contents .location {
+  background-image: url("../images/ico_location.svg");
+}
+.IntroAuthPage .Auth .contents .camera {
+  background-image: url("../images/ico_camera.svg");
+}
+.IntroAuthPage .Auth .contents .contact {
+  background-image: url("../images/ico_contact.svg");
+}
+.IntroAuthPage .Auth .contents li .label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #2e2e2e;
+}
+.IntroAuthPage .Auth .contents li .description {
+  margin-top: 0.2rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: #928e8e;
+  letter-spacing: -0.00375rem;
+}
+.IntroAuthPage .Auth .contents .Button {
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+}

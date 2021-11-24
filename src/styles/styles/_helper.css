@@ -1,0 +1,187 @@
+small {
+  font-size: .75rem;
+  vertical-align: bottom;
+}
+sub {
+  font-size: 13px;
+}
+span.is-primary {
+  color: var(--is-primary) !important;
+  font-weight: 700;
+  word-break: break-all;
+}
+.is-highlight {
+  color: var(--is-highlight) !important;
+}
+.is-sub-text {
+  color: var(--sub-text-color) !important;
+}
+.is-disabled {
+  color: #bdbdbd !important;
+}
+.is-black {
+  color: #333 !important;
+}
+.is-grey {
+  color: var(--sub-text-color) !important;
+}
+.is-dark-grey {
+  color: #585858 !important;
+}
+.is-blue {
+  color: var(--blue) !important;
+}
+.is-coral {
+  color: var(--coral) !important;
+}
+.is-mint {
+  color: var(--mint) !important;
+}
+.is-dark-green {
+  color: #1a6874 !important;
+}
+.is-bg-white {
+  background-color: #FFFFFF !important;
+}
+.is-checked:before {
+  content: '';
+  width: .75rem;
+  height: .75rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='6' cy='6' r='6' fill='%23A50034'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7.85627 4.10606C7.94374 4.01935 8.06182 3.97056 8.18498 3.97022C8.30814 3.96988 8.42649 4.01802 8.51443 4.10424C8.60238 4.19046 8.65286 4.30783 8.65495 4.43098C8.65705 4.55412 8.6106 4.67314 8.52565 4.76231L6.03065 7.88106C5.98777 7.92725 5.93601 7.96431 5.87848 7.99004C5.82095 8.01577 5.75882 8.02963 5.6958 8.03079C5.63279 8.03196 5.57019 8.02041 5.51175 7.99683C5.4533 7.97325 5.40021 7.93813 5.35565 7.89356L3.70252 6.23981C3.65647 6.1969 3.61953 6.14514 3.59391 6.08765C3.56829 6.03015 3.55451 5.96808 3.5534 5.90514C3.55229 5.8422 3.56387 5.77968 3.58745 5.72131C3.61102 5.66294 3.64611 5.60992 3.69062 5.56541C3.73514 5.5209 3.78816 5.48581 3.84652 5.46223C3.90489 5.43866 3.96741 5.42708 4.03035 5.42819C4.09329 5.4293 4.15536 5.44308 4.21286 5.4687C4.27036 5.49432 4.32211 5.53125 4.36502 5.57731L5.67377 6.88543L7.8444 4.11981C7.84827 4.11497 7.85245 4.11037 7.8569 4.10606H7.85627Z' fill='white'/%3E%3C/svg%3E%0A");
+  margin-right: .25rem;
+}
+.margin-top-largest {
+  margin-top: 2rem !important;
+}
+.margin-top-large {
+  margin-top: 1.5rem !important;
+}
+.margin-top {
+  margin-top: 1rem !important;
+}
+.margin-top-medium {
+  margin-top: .75rem !important;
+}
+.margin-top-smaller {
+  margin-top: .25rem !important;
+}
+.margin-top-small {
+  margin-top: .5rem !important;
+}
+.margin-top-none {
+  margin-top: 0 !important;
+}
+.margin-bottom-largest {
+  margin-bottom: 2rem !important;
+}
+.margin-bottom-large {
+  margin-bottom: 1.5rem !important;
+}
+.margin-bottom {
+  margin-bottom: 1rem !important;
+}
+.margin-bottom-medium {
+  margin-bottom: .75rem !important;
+}
+.margin-bottom-small {
+  margin-bottom: .5rem !important;
+}
+.margin-bottom-smaller {
+  margin-bottom: .25rem !important;
+}
+.margin-bottom-none {
+  margin-bottom: 0 !important;
+}
+.margin-none {
+  margin: 0 !important;
+}
+.padding-top-largest {
+  padding-top: 2rem !important;
+}
+.padding-top-large {
+  padding-top: 1.5rem !important;
+}
+.padding-top {
+  padding-top: 1rem !important;
+}
+.padding-top-small {
+  padding-top: .5rem !important;
+}
+.padding-top-none {
+  padding-top: 0 !important;
+}
+.padding-bottom-largest {
+  padding-bottom: 2rem !important;
+}
+.padding-bottom-large {
+  padding-bottom: 1.5rem !important;
+}
+.padding-bottom {
+  padding-bottom: 1rem !important;
+}
+.padding-bottom-small {
+  padding-bottom: .5rem !important;
+}
+.padding-bottom-none {
+  padding-bottom: 0 !important;
+}
+.padding-left {
+  padding-left: 1rem !important;
+}
+.padding-left-large {
+  padding-left: 1.5rem !important;
+}
+.padding-none {
+  padding: 0 !important;
+}
+.is-light {
+  font-weight: 200 !important;
+}
+.is-regular {
+  font-weight: 400 !important;
+}
+.is-strong {
+  font-weight: 700 !important;
+}
+.is-small {
+  font-size: .875rem !important;
+}
+.is-smaller {
+  font-size: .75rem !important;
+}
+.is-smallest {
+  font-size: 0.6875rem !important;
+}
+.is-big {
+  font-size: 1rem !important;
+}
+.is-bigger {
+  font-size: 1.25rem !important;
+}
+.is-biggest {
+  font-size: 1.5rem !important;
+}
+.has-underline {
+  text-decoration: underline !important;
+  text-underline-offset: 2px;
+}
+.width-auto {
+  width: auto !important;
+  min-width: auto !important;
+}
+.height-auto {
+  height: auto !important;
+  min-height: auto !important;
+}
+.line-adjust {
+  line-height: 1.65 !important;
+}
+.keep-all {
+  word-break: keep-all;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+.flex-shrink {
+  flex-shrink: 0;
+}

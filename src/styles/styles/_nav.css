@@ -1,0 +1,34 @@
+nav.tab-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: var(--is-primary);
+  padding: 0 0 calc(env(safe-area-inset-bottom) + 0px);
+}
+nav.tab-bar a {
+  width: 25%;
+  background-repeat: no-repeat;
+  background-position: top 8px center;
+  background-size: 26px;
+  font-size: 11px;
+  color: white !important;
+  font-weight: 700;
+  text-align: center;
+  padding: 36px 0 8px;
+  opacity: 0.5;
+}
+nav.tab-bar a.home {
+  background-image: url("../images/ico_home.svg");
+}
+nav.tab-bar a.my-data {
+  background-image: url("../images/ico_mydata.svg");
+}
+nav.tab-bar a.use-data {
+  background-image: url("../images/ico_usedata.svg");
+}
+nav.tab-bar a.more {
+  background-image: url("../images/ico_more.svg");
+}
+nav.tab-bar a.is-active {
+  opacity: 1;
+}

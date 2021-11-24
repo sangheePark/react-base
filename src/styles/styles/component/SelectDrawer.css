@@ -1,0 +1,91 @@
+.SelectDrawer {
+}
+
+.SelectDrawer .Select .contents {
+  height: 400px;
+  background: #ffffff;
+  /* border-radius: 25px 25px 0 0; */
+  padding: 0 1.5rem 1.5rem;
+}
+
+.SelectDrawer .Select .contents .gray-bar {
+  width: 32px;
+  height: 4px;
+  background: #e8e8e8;
+  margin: 16px auto 0 auto;
+}
+
+.SelectDrawer .Select .contents .title {
+  padding-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 24px;
+}
+
+.SelectDrawer .Select.forDatePicker .contents .title > div {
+  padding: 3px;
+  border: 0.3px solid black;
+  border-radius: 0.25rem !important;
+  text-decoration: none;
+  width: fit-content;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.SelectDrawer .Select .contents .title .small-title {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.SelectDrawer .Select .contents .list {
+  font-size: 16px;
+}
+
+.SelectDrawer .Select .contents * + .list {
+  margin-top: 1rem;
+}
+
+.SelectDrawer .Select .contents .list .item {
+  height: 3rem;
+  min-height: 3rem;
+  align-items: center;
+  padding: 0 0.5rem 0 1.5rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.SelectDrawer .Select .contents .list .item .text {
+  font-size: 14px;
+}
+
+.SelectDrawer .Select .contents .list .item .active {
+  font-size: 14px;
+  font-weight: bold;
+  color: #33ddb0;
+}
+
+.SelectDrawer .Select .contents .list .item .btn {
+  width: 2rem;
+  height: 2rem;
+  background-image: url("../../images/check_on.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.SelectDrawer .Select .contents .margin-24 {
+  margin: 24px 24px 24px 24px;
+}
+
+.SelectDrawer .Select .contents .button {
+  height: 3rem;
+  margin-top: 1.5rem;
+}
+.SelectDrawer .Select .contents .button + .button {
+  margin-top: 0;
+}
+
+/* ScrollDatePicker 관련 속성 추가 */
+.height80vh {
+  height: 80vh;
+}

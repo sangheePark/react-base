@@ -1,0 +1,200 @@
+.LoginPage .back {
+  margin: 31px 0 28px 18px;
+}
+.LoginPage .contents {
+  padding: 0 24px;
+  min-height: 491px;
+}
+.LoginPage .contents .title {
+  /* font-size: 20px;
+  font-weight: 700;
+  color: #434343;
+  margin-bottom: 59px; */
+}
+.LoginPage .contents .title .title-logo {
+  width: 80px;
+  height: 72px;
+  background-image: url("data:image/svg+xml,%3Csvg width='80' height='72' viewBox='0 0 80 72' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M60.923 51.6923H53.5384V29.5385C53.5386 28.2413 53.195 26.9673 52.5427 25.8462H60.923C61.9023 25.8462 62.8414 26.2352 63.5339 26.9276C64.2263 27.6201 64.6153 28.5592 64.6153 29.5385V48C64.6153 48.9793 64.2263 49.9184 63.5339 50.6109C62.8414 51.3033 61.9023 51.6923 60.923 51.6923Z' fill='%23FF6717'/%3E%3Cpath opacity='0.7' fill-rule='evenodd' clip-rule='evenodd' d='M66.4615 59.0769H46.1538C48.1123 59.0769 49.9906 58.2989 51.3755 56.914C52.7604 55.5291 53.5384 53.6508 53.5384 51.6923V38.7692H66.4615C67.4408 38.7692 68.3799 39.1582 69.0724 39.8507C69.7648 40.5431 70.1538 41.4823 70.1538 42.4615V55.3846C70.1538 56.3639 69.7648 57.303 69.0724 57.9955C68.3799 58.6879 67.4408 59.0769 66.4615 59.0769Z' fill='%23FFBE00'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M48 59.0769H44.3077V54.4615C44.3064 52.2109 43.6192 50.0141 42.3377 48.164C41.0562 46.3139 39.2413 44.8983 37.1348 44.1058C38.4966 43.2576 39.5452 41.9888 40.1217 40.4915C40.6983 38.9943 40.7716 37.35 40.3304 35.8074C39.8893 34.2647 38.9577 32.9078 37.6767 31.9417C36.3957 30.9757 34.8349 30.4531 33.2304 30.4531C31.626 30.4531 30.0652 30.9757 28.7842 31.9417C27.5031 32.9078 26.5716 34.2647 26.1304 35.8074C25.6893 37.35 25.7626 38.9943 26.3391 40.4915C26.9157 41.9888 27.9643 43.2576 29.3261 44.1058C27.2197 44.8984 25.4049 46.314 24.1235 48.1641C22.8421 50.0143 22.155 52.211 22.1538 54.4615V59.0769H18.4615C16.503 59.0769 14.6247 58.2989 13.2398 56.914C11.8549 55.5291 11.0769 53.6508 11.0769 51.6923V29.5385C11.0769 27.5799 11.8549 25.7016 13.2398 24.3167C14.6247 22.9319 16.503 22.1538 18.4615 22.1538V14.7692C18.4615 10.8522 20.0176 7.09558 22.7873 4.32581C25.5571 1.55604 29.3137 0 33.2308 0C37.1478 0 40.9044 1.55604 43.6742 4.32581C46.4439 7.09558 48 10.8522 48 14.7692V22.1538C49.9585 22.1538 51.8368 22.9319 53.2217 24.3167C54.6066 25.7016 55.3846 27.5799 55.3846 29.5385V51.6923C55.3846 53.6508 54.6066 55.5291 53.2217 56.914C51.8368 58.2989 49.9585 59.0769 48 59.0769ZM40.6154 14.7692C40.6154 12.8107 39.8373 10.9324 38.4525 9.54752C37.0676 8.16264 35.1893 7.38462 33.2308 7.38462C31.2722 7.38462 29.3939 8.16264 28.009 9.54752C26.6242 10.9324 25.8461 12.8107 25.8461 14.7692V22.1538H40.6154V14.7692Z' fill='%23A50034'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M55.3846 30.5305V51.6923C55.3846 53.6508 54.6065 55.5291 53.2217 56.914C51.8368 58.2989 49.9585 59.0769 47.9999 59.0769H44.3076V54.4615C44.3062 52.2823 43.6558 50.1528 42.4393 48.3446C47.6808 43.1383 52.0516 37.1236 55.3846 30.5305Z' fill='%238C002C'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='80' height='72' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 auto 15px;
+}
+.LoginPage .contents .LG {
+  color: #34495e;
+}
+.LoginPage .contents .pw {
+  margin: 32px 0 0;
+}
+.LoginPage .contents .id,
+.LoginPage .contents .pw {
+  border-bottom: 2px solid #00000033;
+  padding: 5px;
+}
+.LoginPage .contents .id.valid-not,
+.LoginPage .contents .pw.valid-not {
+  border-bottom: 2px solid #eb5757;
+}
+.LoginPage .contents .id.valid,
+.LoginPage .contents .pw.valid {
+  border-bottom: 2px solid #34495e;
+}
+
+.LoginPage .contents .id .cancel,
+.LoginPage .contents .pw .cancel {
+  width: 20px;
+  height: 20px;
+  background: url("../images/icon_close_circle.png") no-repeat;
+  background-size: contain;
+}
+
+.LoginPage .contents .id > input {
+  font-size: 16px;
+  padding-left: 36px;
+  background: url("../images/id_icon.png") no-repeat center left;
+  background-size: 32px 32px;
+}
+.LoginPage .contents .pw > input {
+  font-size: 15px;
+  padding-left: 36px;
+  background: url("../images/pw_icon.png") no-repeat center left;
+  background-size: 32px 32px;
+}
+
+.LoginPage .contents .id > input::placeholder,
+.LoginPage .contents .pw > input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.LoginPage .contents .block {
+  margin: 32px 0 20px;
+}
+.LoginPage .contents .block .button:first-child {
+  background: #a50034;
+}
+.LoginPage .contents .block .button:last-child {
+  background: #2e2e2e;
+}
+.LoginPage .contents .block .button + .button {
+  margin-top: 12px;
+}
+.LoginPage.flex-one {
+  height: 100%;
+}
+.LoginPage .join {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  flex: 0 0 auto;
+  /* height: 7.7rem; */
+}
+.LoginPage .join p {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  color: #a6a6a6;
+  /* margin-top: 3rem; */
+}
+.LoginPage .join p strong {
+  margin: 0 3px;
+}
+.LoginPage .join p:before {
+  content: "";
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='17' viewBox='0 0 17 17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0)'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16.5 8.5C16.5 10.6217 15.6571 12.6566 14.1569 14.1569C12.6566 15.6571 10.6217 16.5 8.5 16.5C6.37827 16.5 4.34344 15.6571 2.84315 14.1569C1.34285 12.6566 0.5 10.6217 0.5 8.5C0.5 6.37827 1.34285 4.34344 2.84315 2.84315C4.34344 1.34285 6.37827 0.5 8.5 0.5C10.6217 0.5 12.6566 1.34285 14.1569 2.84315C15.6571 4.34344 16.5 6.37827 16.5 8.5ZM7.07 6.533H5.75C5.72 4.647 7.18 4 8.506 4C9.903 4 11.179 4.73 11.179 6.24C11.179 7.32 10.544 7.834 9.935 8.297C9.198 8.856 8.925 9.065 8.925 9.783V10.138H7.617L7.61 9.675C7.572 8.748 8.105 8.177 8.778 7.688C9.368 7.244 9.743 6.952 9.743 6.317C9.743 5.492 9.115 5.149 8.429 5.149C7.528 5.149 7.071 5.752 7.071 6.533H7.07ZM8.321 12.976C7.737 12.976 7.312 12.582 7.312 12.049C7.312 11.497 7.737 11.109 8.322 11.109C8.931 11.109 9.35 11.497 9.35 12.049C9.35 12.582 8.93 12.976 8.321 12.976Z' fill='%23B6B6B6'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0'%3E%3Crect width='16' height='16' fill='white' transform='translate(0.5 0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E ");
+  background-size: contain;
+  margin-right: 6px;
+}
+.LoginPage .join p:after {
+  position: absolute;
+  top: 50%;
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    rgba(224, 224, 224, 1) 15%,
+    rgba(255, 255, 255, 0) 16%,
+    rgba(255, 255, 255, 0) 85%,
+    rgba(224, 224, 224, 1) 86%
+  );
+}
+.LoginPage .contents .id-pw-search {
+  font-size: 13px;
+  color: #8b8b8b;
+}
+.LoginPage .contents .id-pw-search > div {
+  padding: 0 16px;
+  border-right: 1px solid #e0e0e0;
+}
+.LoginPage .contents .id-pw-search > div:last-child {
+  border-right: 0;
+}
+.LoginPage .contents .no-valid {
+  font-size: 12px;
+  color: #eb5757;
+  padding: 5px 0 0;
+}
+.LoginPage .id-pw-not-toast {
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  padding: 0 1.5rem;
+}
+.LoginPage .id-pw-not-toast .center {
+  width: 100%;
+  font-size: 14px;
+  color: #ffffff;
+  background: #eb5757;
+  min-height: 36px;
+  border-radius: 6px;
+  padding: 0.5rem 1.5rem;
+}
+
+.LoginPage .id-pw-not-toast .alert-icon {
+  min-width: 16px;
+  min-height: 19px;
+  background: url("../images/icon_ic_check.png") no-repeat;
+  background-size: contain;
+  margin-right: 10px;
+}
+
+.LoginPage .footer {
+  flex: 0 0 auto;
+  height: 2.5rem;
+  background-color: #fbfbfb;
+}
+
+.LoginPage .footer ul {
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.LoginPage .footer li {
+  position: relative;
+  cursor: pointer;
+  color: #928e9e;
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1.05rem;
+}
+
+.LoginPage .footer li + li {
+  margin-left: 1rem;
+  padding-left: 1rem;
+}
+
+.LoginPage .footer li + li:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 1px;
+  height: 1rem;
+  background-color: #e0e0e0;
+}

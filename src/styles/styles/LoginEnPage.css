@@ -1,0 +1,94 @@
+.LoginEnPage {
+}
+.LoginEnPage .back {
+  margin: 31px 0 28px 18px;
+}
+
+.LoginEnPage .login-box {
+  padding: 0 0 0 0;
+}
+
+.LoginEnPage .login-box .id-pw {
+  background: url("../images/group_19.png") no-repeat 24px 2px;
+  background-size: 40px;
+  padding: 0 0 31px 84px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 37px;
+}
+.LoginEnPage .login-box .hp {
+  background: url("../images/group_192.png") no-repeat 24px 2px;
+  background-size: 40px;
+  padding: 0 0 31px 84px;
+  border-bottom: 1px solid #e0e0e0;
+  margin-bottom: 37px;
+}
+.LoginEnPage .login-box .join {
+  background: url("../images/group_194.png") no-repeat 24px 2px;
+  background-size: 40px;
+  padding: 0 0 20px 84px;
+  border-bottom: 10px solid #ededed;
+  margin-bottom: 45px;
+}
+.LoginEnPage .login-box .title {
+  font-size: 14px;
+  color: #434343;
+  font-weight: 700;
+  padding: 0 0 7px;
+}
+.LoginEnPage .login-box .dis {
+  font-size: 12px;
+  color: #595454;
+}
+.LoginEnPage .login-box .arrow-r {
+  right: 24px;
+  top: 18px;
+  border-top-color: #34495e;
+  border-left-color: #34495e;
+}
+
+.LoginEnPage .guide-box {
+  padding: 0 24px;
+}
+.LoginEnPage .guide-box .title {
+  font-size: 13px;
+  font-weight: 400;
+  color: #434343;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+.LoginEnPage .login-box .title button {
+  border: 1px solid #6e93b3;
+}
+.LoginEnPage .guide-box .guide-dis {
+  font-size: 12px;
+  color: #646060;
+}
+.LoginEnPage .guide-box .guide-dis > div {
+  padding: 0 0 25px;
+}
+.LoginEnPage .login-box.sample .hp {
+  padding: 0 0 31px 65px;
+  background-size: 30px;
+}
+
+/* ios layout fix */
+.vbox.login,
+.vbox.guide-box {
+  display: block;
+}
+.login-box .vbox {
+  display: block;
+  margin: 0 !important;
+  padding: 31px 0 31px 84px !important;
+  background-position: 24px 33px !important;
+}
+.LoginEnPage .login-box .title {
+  display: block;
+}
+.login-box .vbox .arrow-r {
+  top: 50%;
+  transform: rotate(135deg) translateY(-50%);
+}
+.LoginEnPage .guide-box {
+  padding: 36px 24px;
+}

@@ -1,0 +1,47 @@
+.JoinDonePage {
+  padding: calc(env(safe-area-inset-top) + 113px) 24px calc(env(safe-area-inset-bottom) + 61px) 24px;
+  /* padding: 113px 24px 61px 24px; */
+}
+
+.JoinDonePage .done-image {
+  margin: 0 auto 20px;
+  width: 56px;
+  height: 56px;
+  background-image: url("../images/group_78.png");
+  background-size: contain;
+}
+
+.JoinDonePage .done-text .lg-my-data {
+  color: #a50034;
+}
+.JoinDonePage .done-text {
+  color: #434343;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.JoinDonePage .related-data-text {
+  margin-top: 20px;
+  font-size: 13px;
+  line-height: 20px;
+  color: #595454;
+}
+
+.JoinDonePage .related-data-btn {
+  margin-top: 20px;
+}
+
+.JoinDonePage .related-data-btn .plus-icon {
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/gridicons_add.png");
+  margin-right: 8px;
+}
+
+.JoinDonePage .related-data-btn .text {
+  font-size: 14px;
+  line-height: 19px;
+  color: #a50034;
+  font-family: NotoSansKR-Bold;
+  font-weight: bold;
+}

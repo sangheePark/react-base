@@ -1,0 +1,14 @@
+:root {
+  --list-bg: #f9f9f9;
+  --list-border: #f8f8f8;
+  --line-list-border: #e0e0e0;
+  --side-padding: 1rem;
+  --is-primary: #34495e;
+  --sub-text-color: #aaa;
+  --is-highlight: #a50034;
+  --coral: #ee5253;
+  --blue: #376696;
+  --dark-blue: #1C4E8E;
+  --mint: #33ddb0;
+  --header-height: 76px;
+}

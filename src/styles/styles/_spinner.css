@@ -1,0 +1,78 @@
+.spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+  width: 50px;
+  height: 50px;
+  background: white;
+  box-shadow: 0 2px 1rem rgba(0,0,0,.1);
+  border-radius: 9999px;
+  margin: 0 auto;
+  padding: 4px;
+}
+.spinner svg {
+  animation: 2s linear infinite svg-animation;
+}
+@keyframes svg-animation {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg)
+  }
+}
+.spinner circle {
+  animation: 1.4s ease-in-out infinite both circle-animation;
+  display: block;
+  fill: transparent;
+  stroke: #a50034;
+  stroke-linecap: round;
+  stroke-dasharray: 283;
+  stroke-dashoffset: 280;
+  stroke-width: 4px;
+  transform-origin: 50% 50%;
+}
+@keyframes circle-animation {
+  0%,
+  25% {
+    stroke-dashoffset: 280;
+    transform: rotate(0);
+  }
+  
+  50%,
+  75% {
+    stroke-dashoffset: 75;
+    transform: rotate(45deg);
+  }
+  
+  100% {
+    stroke-dashoffset: 280;
+    transform: rotate(360deg);
+  }
+}
+
+.loading {
+  position: relative;
+  padding-right: 26px;
+}
+.loading:before {
+  content: '';
+  position: absolute;
+  top: calc(50% - 0.5625rem);
+  right: 0;
+  display: inline-block;
+  width: 1.125rem;
+  height: 1.125rem;
+  background-image: url("../images/ico_loading_line.svg");
+  background-size: auto;
+  background-position: -14px -12px;
+  background-repeat: no-repeat;
+  -webkit-animation: spin 1s linear infinite;
+  -moz-animation: spin 1s linear infinite;
+  animation: spin 1s linear infinite;
+}
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

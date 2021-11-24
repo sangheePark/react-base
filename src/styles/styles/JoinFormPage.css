@@ -1,0 +1,92 @@
+.JoinFormPage {
+  padding: calc(env(safe-area-inset-top) + 32px) 24px calc(env(safe-area-inset-bottom) + 61px) 24px;
+  /* padding: 32px 24px 61px 24px; */
+}
+
+.JoinFormPage .title {
+  height: 60px;
+  margin-top: 20px;
+  font-family: NotoSansKR-Bold;
+  font-size: 20px;
+}
+
+.JoinFormPage .input-list {
+  margin-top: 40px;
+}
+
+.JoinFormPage .input-list .input-list-item {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.JoinFormPage .input-list .input-list-item:last-child {
+  margin-bottom: 1rem;
+}
+
+.JoinFormPage .input-list .input-list-item label {
+  position: absolute;
+  top: 2px;
+  left: 0.125rem;
+  font-size: 1rem;
+  color: #000;
+  opacity: 0.4;
+  transition: 0.4s all;
+}
+
+.JoinFormPage .input-list .input-list-item input:focus + label,
+.JoinFormPage .input-list .input-list-item.input-active label,
+.JoinFormPage .input-list .input-list-item.input-error label {
+  top: -1rem;
+  left: 0;
+  font-size: 0.8rem;
+  color: #2e2e2e;
+  opacity: 1;
+}
+
+.JoinFormPage .input-list .input-list-item .error {
+  visibility: hidden;
+  margin-top: 6px;
+  color: #eb5757;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  height: 1rem;
+}
+.JoinFormPage .input-list .input-list-item .active {
+  visibility: visible;
+}
+
+.JoinFormPage .input-list .input-list-item .input {
+  font-size: 14px;
+  height: 36px;
+  border-bottom: 2px solid #e0e0e0;
+}
+.JoinFormPage .input-list .input-list-item input {
+  height: 2.5rem;
+  font-size: 1rem;
+  color: #2e2e2e;
+  border-bottom: 2px solid #ebebeb;
+}
+
+.JoinFormPage .input-list .input-list-item input[type="password"] {
+  padding-right: 0;
+  text-overflow: ellipsis;
+}
+
+.JoinFormPage .input-list .input-list-item .input-error {
+  border-bottom: 2px solid #eb5757 !important;
+}
+
+.JoinFormPage .input-list .input-list-item .input-active {
+  border-bottom: 2px solid #34495e !important;
+}
+
+.JoinFormPage .input-list .input-list-item input::placeholder {
+  opacity: 0.4;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.JoinFormPage .is-info-text {
+  font-size: 0.8125rem;
+  color: #2e2e2e;
+}

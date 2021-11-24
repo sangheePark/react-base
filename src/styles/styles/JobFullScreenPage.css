@@ -1,0 +1,38 @@
+.JobFullScreenPage {
+  border:1px solid red;
+}
+
+.JobFullScreenPage {
+}
+
+.JobFullScreenPage .Job .contents {
+  background: #ffffff;
+}
+
+.JobFullScreenPage .Job .contents .gray-bar {
+  width: 32px;
+  height: 4px;
+  background: #e8e8e8;
+  margin: 16px auto 0 auto;
+}
+
+.JobFullScreenPage .Job .contents .title {
+  padding-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 24px;
+}
+
+.JobFullScreenPage .Job .contents .list {
+  font-size: 16px;
+}
+.JobFullScreenPage .Job .contents .list .item {
+  margin-top: 20px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.JobFullScreenPage .Job .contents .list .item .text {
+  padding-left: 24px;
+  padding-bottom: 20px;
+  font-size: 14px;
+}

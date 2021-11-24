@@ -1,0 +1,21 @@
+.ptr {
+  height: calc(100% - var(--header-height)) !important;
+  display: block;
+}
+.ptr__children {
+  height: 100% !important;
+  overflow-x: hidden;
+  display: block;
+}
+.ptr__children .content-area {
+  height: 100% !important;
+}
+.ptr__pull-down--pull-more {
+  display: none;
+}
+.ptr__pull-down--pull-more > div > p {
+  display: none;
+}
+.ptr__fetch-more {
+  display: none;
+}
